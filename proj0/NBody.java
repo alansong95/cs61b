@@ -19,13 +19,13 @@ public class NBody {
         return planets;
     }
 
-    public static int readSize(String filename) {
+    private static int readSize(String filename) {
         In in = new In(filename);
 
         return in.readInt();
     }
 
-    public static void drawPlanets(Planet[] planets) {
+    private static void drawPlanets(Planet[] planets) {
         for (Planet p: planets) {
             p.draw();
         }

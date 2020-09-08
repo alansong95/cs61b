@@ -8,7 +8,7 @@ public class Planet {
     public double mass;
     public String imgFileName;
 
-    public static double G = 6.67 * Math.pow(10, -11);
+    private static double G = 6.67 * Math.pow(10, -11);
 
     public Planet(double xP, double yP, double xV, double yV, double m, String img) {
         this.xxPos = xP;
@@ -28,11 +28,11 @@ public class Planet {
         this.imgFileName = p.imgFileName;
     }
 
-    public double dx(Planet p) {
+    private double dx(Planet p) {
         return p.xxPos - this.xxPos;
     }
 
-    public double dy(Planet p) {
+    private double dy(Planet p) {
         return p.yyPos - this.yyPos;
     }
 
