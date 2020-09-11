@@ -136,4 +136,8 @@ public class ArrayDeque<T> {
             return this.items[temp];
         }
     }
+
+    public T getRecursive(int index) {
+        return get(index);
+    }
 }
