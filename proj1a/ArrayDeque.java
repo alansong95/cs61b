@@ -137,7 +137,7 @@ public class ArrayDeque<T> {
         }
     }
 
-    public T getRecursive(int index) {
-        return get(index);
-    }
+//    public T getRecursive(int index) {
+//        return get(index);
+//    }
 }
