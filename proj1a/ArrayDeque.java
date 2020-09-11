@@ -132,8 +132,12 @@ public class ArrayDeque<T> {
         if (nextFirst < nextLast) {
             return this.items[nextFirst + 1 + index];
         } else {
-            int temp = nextFirst + 1 + index - this.items.length;
-            return this.items[temp];
+            if (nextFirst + 1 + index >= this.items.length) {
+                int temp = index - (this.items.length  - (nextFirst + 1));
+                return this.items[temp];
+            } else {
+                return this.items[nextFirst + 1 + index];
+            }
         }
     }
 

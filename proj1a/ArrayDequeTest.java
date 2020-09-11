@@ -150,6 +150,18 @@ public class ArrayDequeTest {
 
     }
 
+    public static void d001() {
+        ArrayDeque<Integer> lld1 = new ArrayDeque<Integer>();
+
+        for (int i = 0; i < 100; i++) {
+            lld1.addLast(i);
+        }
+        for (int i = 0; i < 100; i++ ){
+            System.out.println(lld1.get(i));
+//            lld1.get(i);
+        }
+    }
+
     public static void main(String[] args) {
         System.out.println("Running tests.\n");
 //        addIsEmptySizeTest();
@@ -157,6 +169,7 @@ public class ArrayDequeTest {
 //        addGetTest();
 
 //        manyAddsTest();
-        manyAddsDeletesTest();
+//        manyAddsDeletesTest();
+        d001();
     }
 }
