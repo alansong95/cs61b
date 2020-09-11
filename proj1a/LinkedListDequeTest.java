@@ -133,11 +133,19 @@ public class LinkedListDequeTest {
 		System.out.println(lld1.removeFirst());
 	}
 
+	public static void a012() {
+		LinkedListDeque<Integer> lld1 = new LinkedListDeque<Integer>();
+
+		System.out.println(lld1.removeLast());
+		System.out.println(lld1.removeFirst());
+		System.out.println(lld1.size());
+	}
+
 	public static void main(String[] args) {
 		System.out.println("Running tests.\n");
 //		addIsEmptySizeTest();
 //		addRemoveTest();
 //		addGetTest();
-		a011();
+		a012();
 	}
 } 

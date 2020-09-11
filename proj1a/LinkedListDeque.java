@@ -85,7 +85,7 @@ public class LinkedListDeque<T> {
 
     public T removeLast() {
         Node last = this.last;
-        if (last != null) {
+        if (last != sentinel) {
             if (last.prev == this.sentinel) {
                 this.last = this.sentinel;
                 this.sentinel.next = null;
