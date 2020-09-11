@@ -68,10 +68,12 @@ public class LinkedListDeque<T> {
     public T removeFirst() {
         Node first = this.sentinel.next;
         if (first != null) {
-            this.sentinel.next = first.next;
+
             if (first.next != this.sentinel) {
+                this.sentinel.next = first.next;
                 first.next.prev = this.sentinel;
             } else {
+                this.sentinel.next = null;
                 this.last = this.sentinel;
             }
             size--;
