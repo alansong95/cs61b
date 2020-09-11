@@ -115,6 +115,14 @@ public class LinkedListDeque<T> {
     }
 
     public T getRecursive(int index) {
-        return get(index);
+        return getRecursiveHelper(index, sentinel.next);
+    }
+
+    private T getRecursiveHelper(int index, Node node) {
+        if (index == 0) {
+            return node.item;
+        }
+        index--;
+        return getRecursiveHelper(index, node.next);
     }
 }
