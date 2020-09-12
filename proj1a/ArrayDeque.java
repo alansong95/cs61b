@@ -108,6 +108,9 @@ public class ArrayDeque<T> {
 
     public T removeFirst() {
         this.nextFirst++;
+        if (this.nextFirst >= this.items.length) {
+            this.nextFirst = 0;
+        }
         T toReturn = this.items[this.nextFirst];
         this.size--;
 
@@ -119,6 +122,9 @@ public class ArrayDeque<T> {
 
     public T removeLast() {
         this.nextLast--;
+        if (this.nextLast < 0) {
+            this.nextLast = this.items.length - 1;
+        }
         T toReturn = this.items[this.nextLast];
         size--;
 
