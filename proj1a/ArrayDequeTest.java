@@ -162,6 +162,27 @@ public class ArrayDequeTest {
         }
     }
 
+    public static void d002() {
+        ArrayDeque<Integer> lld1 = new ArrayDeque<Integer>();
+
+        for (int i = 0; i < 100; i++) {
+            lld1.addLast(i);
+        }
+        System.out.println(lld1.removeFirst());
+        System.out.println(lld1.removeLast());
+    }
+
+    public static void d011() {
+        ArrayDeque<Integer> lld1 = new ArrayDeque<Integer>();
+
+        lld1.addFirst(0);
+        int x = lld1.removeFirst();
+        lld1.addFirst(2);
+        int y = lld1.get(0);
+        int z = lld1.removeLast();
+        int f = 5;
+    }
+
     public static void main(String[] args) {
         System.out.println("Running tests.\n");
 //        addIsEmptySizeTest();
@@ -170,6 +191,6 @@ public class ArrayDequeTest {
 
 //        manyAddsTest();
 //        manyAddsDeletesTest();
-        d001();
+        d011();
     }
 }
