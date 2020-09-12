@@ -153,10 +153,10 @@ public class ArrayDequeTest {
     public static void d001() {
         ArrayDeque<Integer> lld1 = new ArrayDeque<Integer>();
 
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 8; i++) {
             lld1.addLast(i);
         }
-        for (int i = 0; i < 100; i++ ){
+        for (int i = 0; i < 8; i++ ){
             System.out.println(lld1.get(i));
 //            lld1.get(i);
         }
@@ -191,6 +191,6 @@ public class ArrayDequeTest {
 
 //        manyAddsTest();
 //        manyAddsDeletesTest();
-        d011();
+        d001();
     }
 }
