@@ -216,6 +216,52 @@ public class ArrayDequeTest {
         int x99 = 0;
     }
 
+    public static void d0112() {
+        ArrayDeque<Integer> lld1 = new ArrayDeque<Integer>();
+
+        lld1.addFirst(0);
+        lld1.addLast(1);
+        lld1.addLast(2);
+        lld1.addLast(3);
+        lld1.addFirst(4);
+        lld1.addFirst(5);
+        lld1.printDeque();
+        int x = lld1.removeLast();
+        lld1.printDeque();
+        lld1.addLast(7);
+        lld1.addLast(8);
+        lld1.addFirst(9);
+        int x1 = lld1.get(5);
+        lld1.addLast(11);
+        lld1.printDeque();
+        int x2=lld1.removeLast();
+        lld1.printDeque();
+        lld1.addLast(13);
+        lld1.printDeque();
+        int x3=lld1.get(8);
+        int x4=lld1.removeFirst();
+        int x5=lld1.removeFirst();
+        lld1.printDeque();
+        lld1.addFirst(17);
+        lld1.printDeque();
+        int x6=lld1.removeLast();
+        int x7=lld1.removeLast();
+        int x8=lld1.removeLast();
+        int x9=lld1.removeLast();
+        int x10=lld1.removeLast();
+        int x11=lld1.removeFirst();
+        int x12=lld1.removeFirst();
+        int x13=lld1.removeFirst();
+        Integer x14=lld1.removeFirst();
+        lld1.printDeque();
+
+        for (int i = 0; i < 100; i++) {
+            lld1.addLast(i);
+        }
+        int x15 = lld1.get(49);
+        int x16=1;
+    }
+
     public static void d012() {
         ArrayDeque<Integer> lld1 = new ArrayDeque<Integer>();
         lld1.removeFirst();
@@ -232,6 +278,6 @@ public class ArrayDequeTest {
 
 //        manyAddsTest();
 //        manyAddsDeletesTest();
-        d011();
+        d0112();
     }
 }

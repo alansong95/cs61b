@@ -72,10 +72,11 @@ public class ArrayDeque<T> {
             }
         }
         this.items = temp;
-        this.nextFirst = temp.length / 4;
-        if (startIndex == nextFirst) {
+        if (this.size == 0) {
+            this.nextFirst = temp.length / 4;
             this.nextLast = startIndex + 1;
         } else {
+            this.nextFirst = temp.length / 4 - 1;
             this.nextLast = startIndex;
         }
     }
