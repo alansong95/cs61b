@@ -107,31 +107,37 @@ public class ArrayDeque<T> {
     }
 
     public T removeFirst() {
-        this.nextFirst++;
-        if (this.nextFirst >= this.items.length) {
-            this.nextFirst = 0;
-        }
-        T toReturn = this.items[this.nextFirst];
-        this.size--;
+        if (this.size > 0) {
+            this.nextFirst++;
+            if (this.nextFirst >= this.items.length) {
+                this.nextFirst = 0;
+            }
+            T toReturn = this.items[this.nextFirst];
+            this.size--;
 
-        if (this.items.length >= 16 && ((double) this.size / this.items.length < 0.25)) {
-            sizeDown();
+            if (this.items.length >= 16 && ((double) this.size / this.items.length < 0.25)) {
+                sizeDown();
+            }
+            return toReturn;
         }
-        return toReturn;
+        return null;
     }
 
     public T removeLast() {
-        this.nextLast--;
-        if (this.nextLast < 0) {
-            this.nextLast = this.items.length - 1;
-        }
-        T toReturn = this.items[this.nextLast];
-        size--;
+        if (this.size > 0) {
+            this.nextLast--;
+            if (this.nextLast < 0) {
+                this.nextLast = this.items.length - 1;
+            }
+            T toReturn = this.items[this.nextLast];
+            size--;
 
-        if (this.items.length >= 16 && (double) this.size / this.items.length < 0.25) {
-            sizeDown();
+            if (this.items.length >= 16 && (double) this.size / this.items.length < 0.25) {
+                sizeDown();
+            }
+            return toReturn;
         }
-        return toReturn;
+        return null;
     }
 
     public T get(int index) {

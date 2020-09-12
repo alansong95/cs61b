@@ -216,6 +216,14 @@ public class ArrayDequeTest {
         int x99 = 0;
     }
 
+    public static void d012() {
+        ArrayDeque<Integer> lld1 = new ArrayDeque<Integer>();
+        lld1.removeFirst();
+        lld1.removeLast();
+        int x = lld1.size();
+        int k = 1;
+    }
+
     public static void main(String[] args) {
         System.out.println("Running tests.\n");
 //        addIsEmptySizeTest();
@@ -224,6 +232,6 @@ public class ArrayDequeTest {
 
 //        manyAddsTest();
 //        manyAddsDeletesTest();
-        d011();
+        d012();
     }
 }
