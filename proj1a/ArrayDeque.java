@@ -72,8 +72,12 @@ public class ArrayDeque<T> {
             }
         }
         this.items = temp;
-        this.nextFirst = temp.length / 4 - 1;
-        this.nextLast = temp.length / 4 * 3;
+        this.nextFirst = temp.length / 4;
+        if (startIndex == nextFirst) {
+            this.nextLast = startIndex + 1;
+        } else {
+            this.nextLast = startIndex;
+        }
     }
 
     public void addLast(T item) {
@@ -116,6 +120,7 @@ public class ArrayDeque<T> {
             this.size--;
 
             if (this.items.length >= 16 && ((double) this.size / this.items.length < 0.25)) {
+//            if (((double) this.size / this.items.length < 0.25)) {
                 sizeDown();
             }
             return toReturn;
@@ -133,6 +138,7 @@ public class ArrayDeque<T> {
             size--;
 
             if (this.items.length >= 16 && (double) this.size / this.items.length < 0.25) {
+//            if ((double) this.size / this.items.length < 0.25) {
                 sizeDown();
             }
             return toReturn;

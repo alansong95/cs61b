@@ -232,6 +232,6 @@ public class ArrayDequeTest {
 
 //        manyAddsTest();
 //        manyAddsDeletesTest();
-        d012();
+        d011();
     }
 }
