@@ -172,6 +172,20 @@ public class ArrayDequeTest {
         System.out.println(lld1.removeLast());
     }
 
+    public static void d003() {
+        ArrayDeque<Integer> lld1 = new ArrayDeque<Integer>();
+
+        lld1.addFirst(0);
+        lld1.addFirst(1);
+        int x = lld1.removeLast();
+        lld1.addFirst(3);
+        lld1.isEmpty();
+        lld1.addFirst(5);
+        lld1.addFirst(6);
+        int y = lld1.removeLast();
+        int k = 1;
+    }
+
     public static void d011() {
         ArrayDeque<Integer> lld1 = new ArrayDeque<Integer>();
 
@@ -191,6 +205,6 @@ public class ArrayDequeTest {
 
 //        manyAddsTest();
 //        manyAddsDeletesTest();
-        d001();
+        d003();
     }
 }

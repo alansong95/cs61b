@@ -122,7 +122,7 @@ public class ArrayDeque<T> {
         T toReturn = this.items[this.nextLast];
         size--;
 
-        if ((double) this.size / this.items.length < 0.25) {
+        if (this.items.length >= 16 && (double) this.size / this.items.length < 0.25) {
             sizeDown();
         }
         return toReturn;
