@@ -35,8 +35,15 @@ public class ArrayRingBuffer<T> extends  AbstractBoundedQueue<T> {
      */
     public void enqueue(T x) {
         // TODO: Enqueue the item. Don't forget to increase fillCount and update last.
+        if (fillCount == capacity) {
+            System.out.println("Its full");
+            return;
+        }
         rb[last] = x;
         last++;
+        if (last == capacity) {
+            last = 0;
+        }
         fillCount++;
     }
 
@@ -47,8 +54,15 @@ public class ArrayRingBuffer<T> extends  AbstractBoundedQueue<T> {
      */
     public T dequeue() {
         // TODO: Dequeue the first item. Don't forget to decrease fillCount and update
+        if (fillCount == 0) {
+            System.out.println("Its empty");
+            return null;
+        }
         T item = rb[first];
         first++;
+        if (first == capacity) {
+            first = 0;
+        }
         fillCount--;
         return item;
     }
